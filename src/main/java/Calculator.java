@@ -1,9 +1,15 @@
 package main.java;
 
+import java.util.List;
+
 public class Calculator {
 
-    public int sum(int value1, int value2){
-        return value1 + value2;
+    public int sum(List<Integer> integers){
+        int sum = 0;
+        for(int integer : integers) {
+            sum += integer;
+        }
+        return sum;
     }
 
 }

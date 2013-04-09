@@ -25,12 +25,5 @@ public class RectangleTest {
 
         Rectangle rectangle = new Rectangle(length, width);
         assertEquals(length * width, rectangle.area());
-
-    }
-
-    @Test
-    public void shouldHaveAnAreaGreaterThanZero(){
-//        Rectangle rectangle = new Rectangle();
-//        assertTrue(rectangle.area() > 0);
     }
 }

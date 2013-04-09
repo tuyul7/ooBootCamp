@@ -1,6 +1,7 @@
 package test.java;
 
 import main.java.Calculator;
+import main.java.Rectangle;
 import org.junit.Test;
 
 import static java.util.Arrays.asList;
@@ -11,19 +12,25 @@ public class CalculatorTest {
     @Test
     public void shouldSumOnePlusTwo(){
         Calculator calculator = new Calculator();
-        assertEquals(3, calculator.sum(asList(1, 2)));
+        assertEquals(3.0, calculator.sum(asList(1.0, 2.0)));
     }
 
     @Test
     public void shouldSumTwoPlusThree(){
         Calculator calculator = new Calculator();
-        assertEquals(5, calculator.sum(asList(2, 3)));
+        assertEquals(5.0, calculator.sum(asList(2.0, 3.0)));
     }
 
     @Test
     public void shouldSumMoreThanTwoNumbers(){
         Calculator calculator = new Calculator();
-        assertEquals(6, calculator.sum(asList(1, 2, 3)));
+        assertEquals(6.0, calculator.sum(asList(1.0, 2.0, 3.0)));
+    }
+
+    @Test
+    public void shouldSumAreasFromTwoRectangles(){
+        Calculator calculator = new Calculator();
+        assertEquals(8.0, calculator.sum(asList(new Rectangle(1, 2).area(), new Rectangle(2, 3).area())));
     }
 
 }

@@ -32,5 +32,4 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
         assertEquals(8.0, calculator.sum(asList(new Rectangle(1, 2).area(), new Rectangle(2, 3).area())));
     }
-
 }

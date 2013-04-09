@@ -15,7 +15,6 @@ public class RectangleTest {
 
         Rectangle rectangle = new Rectangle(length, width);
         assertEquals(length * width, rectangle.area());
-
     }
 
     @Test

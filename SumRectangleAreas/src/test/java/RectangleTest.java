@@ -16,13 +16,4 @@ public class RectangleTest {
         Rectangle rectangle = new Rectangle(length, width);
         assertEquals(length * width, rectangle.area());
     }
-
-    @Test
-    public void shouldTakeUserInputForWidthAndLengthValues(){
-        double length = 2;
-        double width = 2;
-
-        Rectangle rectangle = new Rectangle(length, width);
-        assertEquals(length * width, rectangle.area());
-    }
 }

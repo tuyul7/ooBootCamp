@@ -14,4 +14,11 @@ public class RectangleTest {
 
         assertTrue(rectangle.contains(new Point(2, 9)));
     }
+
+    @Test
+    public void shouldContainBottomRightCorner(){
+        Rectangle rectangle = new Rectangle(5, 5, 6, 8);
+
+        assertTrue(rectangle.contains(new Point(8, 1)));
+    }
 }

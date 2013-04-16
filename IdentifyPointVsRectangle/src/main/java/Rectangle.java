@@ -15,6 +15,11 @@ public class Rectangle {
     }
 
     public boolean contains(Point point){
-        return point.x >= centerX - (width/2) && point.y <= centerY + (height/2);
+        boolean insideLeftSide = point.x >= centerX - (width/2);
+        boolean insideTopSide = point.y <= centerY + (height/2);
+        boolean insideBottomSide = point.y >= centerY - (height/2);
+        boolean insideRightSide = point.x <= centerX + (width/2);
+
+        return insideLeftSide && insideTopSide && insideBottomSide && insideRightSide;
     }
 }

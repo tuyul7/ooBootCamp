@@ -13,4 +13,8 @@ public class RectangleManager {
     public boolean contains(Rectangle rectangle){
         return rectangles.contains(rectangle);
     }
+
+    public void add(Rectangle rectangle) {
+        rectangles.add(rectangle);
+    }
 }

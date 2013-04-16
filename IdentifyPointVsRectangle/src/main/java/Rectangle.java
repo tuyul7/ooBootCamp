@@ -2,23 +2,23 @@ package main.java;
 
 public class Rectangle {
 
-    private double centerX;
-    private double centerY;
-    private double width;
-    private double height;
+    private double minX;
+    private double minY;
+    private double maxX;
+    private double maxY;
 
     public Rectangle(double centerX, double centerY, double width, double height) {
-        this.centerX = centerX;
-        this.centerY = centerY;
-        this.width = width;
-        this.height = height;
+        this.minX = centerX - width/2;
+        this.minY = centerY - height/2;
+        this.maxX = centerX + width/2;
+        this.maxY = centerY + height/2;
     }
 
     public boolean contains(Point point){
-        boolean insideLeftSide = point.x >= centerX - (width/2);
-        boolean insideTopSide = point.y <= centerY + (height/2);
-        boolean insideBottomSide = point.y >= centerY - (height/2);
-        boolean insideRightSide = point.x <= centerX + (width/2);
+        boolean insideLeftSide = point.x >= minX;
+        boolean insideBottomSide = point.y >= minY;
+        boolean insideRightSide = point.x <= maxX;
+        boolean insideTopSide = point.y <= maxY;
 
         return insideLeftSide && insideTopSide && insideBottomSide && insideRightSide;
     }

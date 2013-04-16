@@ -9,7 +9,7 @@ import static junit.framework.Assert.assertTrue;
 
 public class RectangleTest {
 
-    private Rectangle rectangle = new Rectangle(5, 5, 6, 8);;
+    private Rectangle rectangle = new Rectangle(5, 5, 6, 8);
 
     @Test
     public void shouldContainTopLeftCorner(){

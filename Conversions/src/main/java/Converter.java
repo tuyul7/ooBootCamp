@@ -12,4 +12,8 @@ public class Converter {
         BigDecimal bigDecimal = new BigDecimal(val);
         return bigDecimal.setScale(1, RoundingMode.CEILING).doubleValue();
     }
+
+    public double feetToInches(double val) {
+        return round(val * 12);
+    }
 }

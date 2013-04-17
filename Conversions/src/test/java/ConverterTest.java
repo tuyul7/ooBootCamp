@@ -29,4 +29,16 @@ public class ConverterTest {
     public void shouldRound15InchesTo1Point3(){
         assertThat(converter.inchesToFeet(15), is(1.3));
     }
+
+    @Test
+    public void shouldConvert1FootTo12Inches(){
+        assertThat(converter.feetToInches(1), is(12.0));
+    }
+
+    @Test
+    public void shouldConvert1Point23FeetTo14Point8Inches(){
+        assertThat(converter.feetToInches(1.23), is(14.8));
+    }
+
+
 }

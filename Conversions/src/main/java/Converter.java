@@ -19,6 +19,6 @@ public class Converter {
     }
 
     public Double cupsToTbsp(double val) {
-        return 8.0;
+        return val * 8;
     }
 }

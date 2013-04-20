@@ -39,4 +39,9 @@ public class ConverterTest {
     public void shouldConvert1CupTo8Tbsps(){
         assertThat(converter.cupsToTbsp(1), is(8.0));
     }
+
+    @Test
+    public void shouldConvert2CupTo16Tbsps(){
+        assertThat(converter.cupsToTbsp(2), is(16.0));
+    }
 }

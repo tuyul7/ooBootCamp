@@ -36,9 +36,7 @@ public class ConverterTest {
     }
 
     @Test
-    public void shouldConvert1Point23FeetTo14Point8Inches(){
-        assertThat(converter.feetToInches(1.23), is(14.8));
+    public void shouldConvert1CupTo8Tbsps(){
+        assertThat(converter.cupsToTbsp(1), is(8.0));
     }
-
-
 }

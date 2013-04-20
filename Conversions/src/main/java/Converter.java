@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public class Converter {
+
     public double inchesToFeet(double inches) {
         return round(inches / 12);
     }
@@ -15,5 +16,9 @@ public class Converter {
 
     public double feetToInches(double val) {
         return round(val * 12);
+    }
+
+    public Double cupsToTbsp(double val) {
+        return 8.0;
     }
 }

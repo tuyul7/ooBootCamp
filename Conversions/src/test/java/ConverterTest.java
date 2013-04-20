@@ -1,6 +1,7 @@
 package test.java;
 
 import main.java.Converter;
+import main.java.Pair;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
@@ -12,7 +13,7 @@ public class ConverterTest {
 
     @Test
     public void shouldConvert12InchesTo1Foot(){
-        assertThat(converter.inchesToFeet(12), is(1.0));
+        assertThat(converter.convert(new Pair("INCHES", 12), "FEET"), is(1.0));
     }
 
     @Test

@@ -18,17 +18,17 @@ public class ConverterTest {
 
     @Test
     public void shouldConvert24InchesTo2Feet(){
-        assertThat(converter.inchesToFeet(24), is(2.0));
+        assertThat(converter.convert(new Pair("INCHES", 24), "FEET"), is(2.0));
     }
 
     @Test
     public void shouldRound18InchesTo1Point5Feet(){
-        assertThat(converter.inchesToFeet(18), is(1.5));
+        assertThat(converter.convert(new Pair("INCHES", 18), "FEET"), is(1.5));
     }
 
     @Test
     public void shouldRound15InchesTo1Point3(){
-        assertThat(converter.inchesToFeet(15), is(1.3));
+        assertThat(converter.convert(new Pair("INCHES", 15), "FEET"), is(1.3));
     }
 
     @Test

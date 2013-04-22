@@ -3,6 +3,7 @@ package test.java;
 import main.java.Converter;
 import main.java.Length;
 import main.java.Pair;
+import main.java.Volume;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
@@ -38,12 +39,12 @@ public class ConverterTest {
     }
 
     @Test
-    public void shouldConvert1CupTo8Tbsps(){
-        assertThat(converter.cupsToTbsp(1), is(8.0));
+    public void shouldConvert1CupTo16Tbsps(){
+        assertThat(converter.convert(new Pair(Volume.CUPS, 1), Volume.TABLESPOONS), is(16.0));
     }
 
     @Test
-    public void shouldConvert2CupTo16Tbsps(){
-        assertThat(converter.cupsToTbsp(2), is(16.0));
+    public void shouldConvert2CupTo32Tbsps(){
+        assertThat(converter.convert(new Pair(Volume.CUPS, 2), Volume.TABLESPOONS), is(32.0));
     }
 }

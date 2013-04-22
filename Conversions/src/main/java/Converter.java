@@ -22,7 +22,8 @@ public class Converter {
         return val * 8;
     }
 
-    public Double convert(Pair pair, String newType){
-        return inchesToFeet(pair.getValue());
+    public double convert(Pair pair, Object newType){
+        double valInInches = pair.getKey() * pair.getValue();
+        return round(valInInches / (Double) newType);
     }
 }

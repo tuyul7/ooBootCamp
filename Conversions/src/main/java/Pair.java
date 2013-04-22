@@ -2,24 +2,23 @@ package main.java;
 
 public class Pair {
 
-    private String key;
+    private double key;
+    private double value;
 
-    public Pair(String key, double value) {
+    public Pair(double key, double value) {
         this.key = key;
         this.value = value;
     }
-
-    private double value;
-    public String getKey() {
+    public double getKey() {
         return key;
-    }
-
-    public void setKey(String key) {
-        this.key = key;
     }
 
     public double getValue() {
         return value;
+    }
+
+    public void setKey(double key) {
+        this.key = key;
     }
 
     public void setValue(double value) {

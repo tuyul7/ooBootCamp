@@ -22,6 +22,6 @@ public class Main {
         Measurement measurement2 = new Measurement(4, TBSP);
         Measurements measurements = new Measurements().add(measurement).add(measurement2);
         Measurement result = measurements.convertTo(TBSP);
-        System.out.println(measurement.displayValue() + " + " + measurement2.displayValue() + " = " + result.displayValue());
+        System.out.println(measurements.displayValue() + " = " + result.displayValue());
     }
 }

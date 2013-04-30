@@ -23,4 +23,12 @@ public class Measurements {
         }
         return new Measurement(sum, unit);
     }
+
+    public String displayValue() {
+        String display = "";
+        for(Measurement measurement : measurements) {
+            display += measurement.displayValue() + " + ";
+        }
+        return display.substring(0, display.length() - 3);
+    }
 }

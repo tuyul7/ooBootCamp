@@ -2,7 +2,7 @@ package main.java;
 
 import java.util.ArrayList;
 
-public class Measurements {
+public class MeasurementCombiner {
 
 
     private ArrayList<Measurement> measurements = new ArrayList<Measurement>();
@@ -11,7 +11,7 @@ public class Measurements {
         return measurements;
     }
 
-    public Measurements add(Measurement measurement) {
+    public MeasurementCombiner add(Measurement measurement) {
         this.measurements.add(measurement);
         return this;
     }

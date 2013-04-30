@@ -20,8 +20,8 @@ public class Main {
     private static void multipleInputsVolumeConversion() {
         Measurement measurement = new Measurement(1, CUP);
         Measurement measurement2 = new Measurement(4, TBSP);
-        Measurements measurements = new Measurements().add(measurement).add(measurement2);
-        Measurement result = measurements.convertTo(TBSP);
-        System.out.println(measurements.displayValue() + " = " + result.displayValue());
+        MeasurementCombiner mCombiner = new MeasurementCombiner().add(measurement).add(measurement2);
+        Measurement result = mCombiner.convertTo(TBSP);
+        System.out.println(mCombiner.displayValue() + " = " + result.displayValue());
     }
 }

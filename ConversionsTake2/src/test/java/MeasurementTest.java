@@ -13,12 +13,18 @@ public class MeasurementTest {
     @Test
     public void shouldCalculate1TbspTo3Tsp(){
         Measurement measurement = new Measurement(1, TBSP);
-        assertThat(measurement.toUnit(TSP), is(3));
+        assertThat(measurement.convertTo(TSP), is(3.f));
     }
 
     @Test
     public void shouldCalculate2TbspTo6Tsp(){
         Measurement measurement = new Measurement(2, TBSP);
-        assertThat(measurement.toUnit(TSP), is(6));
+        assertThat(measurement.convertTo(TSP), is(6.f));
+    }
+
+    @Test
+    public void shouldCalculate3TspTo1Tbsp(){
+        Measurement measurement = new Measurement(3, TSP);
+        assertThat(measurement.convertTo(TBSP), is(1.f));
     }
 }

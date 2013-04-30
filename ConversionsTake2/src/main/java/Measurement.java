@@ -11,8 +11,8 @@ public class Measurement {
     }
 
 
-    public int toUnit(Unit newUnit) {
-        return newUnit.convert(this);
+    public float convertTo(Unit newUnit) {
+        return newUnit.convertFrom(this);
     }
 
     public int getAmt() {

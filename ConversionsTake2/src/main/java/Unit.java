@@ -1,27 +1,27 @@
 package main.java;
 
-public enum Unit {
+public enum Unit implements Comparable<Unit> {
 
-    TSP(1),
-    TBSP(3),
-    CUP(24);
+    TSP(1.f),
+    TBSP(3.f),
+    CUP(24.f);
 
-    private int multiplier;
+    private float multiplier;
 
-    Unit(int multiplier) {
+    Unit(float multiplier) {
         this.multiplier = multiplier;
     }
 
-    private int multiplyForBase() {
-        return multiplier;
+    private float asBase(int amt) {
+        return amt * multiplier;
     }
 
-    private int multiplyForConversion() {
+    private float multiplyForConversion() {
         return 1/multiplier;
     }
 
-    public int convert(Measurement measurement){
-        int base = measurement.getAmt() * measurement.getUnit().multiplyForBase();
+    public float convertFrom(Measurement measurement){
+        float base = measurement.getUnit().asBase(measurement.getAmt());
         return base * multiplyForConversion();
     }
 }

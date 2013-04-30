@@ -12,7 +12,7 @@ public enum Unit implements Comparable<Unit> {
         this.multiplier = multiplier;
     }
 
-    private float asBase(int amt) {
+    private float asBase(float amt) {
         return amt * multiplier;
     }
 

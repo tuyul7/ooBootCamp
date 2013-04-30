@@ -1,7 +1,6 @@
 package main.java;
 
-import static main.java.Unit.CUP;
-import static main.java.Unit.TBSP;
+import static main.java.Unit.*;
 
 public class Main {
 
@@ -9,12 +8,14 @@ public class Main {
         basicVolumeConversion();
 
         multipleInputsVolumeConversion();
+
+        basicLengthConversion();
     }
 
     private static void basicVolumeConversion() {
         Measurement measurement = new Measurement(1, CUP);
-        Measurement newMeasurement = measurement.convertTo(TBSP);
-        System.out.println(measurement.displayValue() + " = " + newMeasurement.displayValue());
+        Measurement result = measurement.convertTo(TBSP);
+        System.out.println(measurement.displayValue() + " = " + result.displayValue());
     }
 
     private static void multipleInputsVolumeConversion() {
@@ -23,5 +24,11 @@ public class Main {
         MeasurementCombiner mCombiner = new MeasurementCombiner().add(measurement).add(measurement2);
         Measurement result = mCombiner.convertTo(TBSP);
         System.out.println(mCombiner.displayValue() + " = " + result.displayValue());
+    }
+
+    private static void basicLengthConversion() {
+        Measurement measurement = new Measurement(36, YARD);
+        Measurement result = measurement.convertTo(INCH);
+        System.out.println(measurement.displayValue() + " = " + result.displayValue());
     }
 }

@@ -24,12 +24,6 @@ public class Measurement {
     }
 
     public String displayValue() {
-        return amt + " " + pluralizationOfUnit();
-    }
-
-    private String pluralizationOfUnit() {
-        String suffix = "";
-        if(amt == 0 || amt > 1) { suffix = "s"; }
-        return unit.toString().toLowerCase() + suffix;
+        return amt + " " + unit.displayUnit(amt);
     }
 }

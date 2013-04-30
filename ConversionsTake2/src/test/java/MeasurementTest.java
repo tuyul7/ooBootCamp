@@ -28,19 +28,25 @@ public class MeasurementTest {
     }
 
     @Test
-    public void shouldSetDisplayForSingleAmt(){
+    public void shouldCalculate36InchesTo1Yard(){
+        Measurement measurement = new Measurement(36, INCH);
+        assertThat(measurement.convertTo(YARD).getAmt(), is(1.f));
+    }
+
+    @Test
+    public void shouldDisplayForSingleAmt(){
         Measurement measurement = new Measurement(1, CUP);
         assertThat(measurement.displayValue(), is("1 cup"));
     }
 
     @Test
-    public void shouldSetDisplayForManyAmt(){
+    public void shouldDisplayForManyAmt(){
         Measurement measurement = new Measurement(2, CUP);
         assertThat(measurement.displayValue(), is("2 cups"));
     }
 
     @Test
-    public void shouldSetDisplayForZeroAmt(){
+    public void shouldDisplayForZeroAmt(){
         Measurement measurement = new Measurement(0, CUP);
         assertThat(measurement.displayValue(), is("0 cups"));
     }

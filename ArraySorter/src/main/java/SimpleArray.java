@@ -16,10 +16,18 @@ public class SimpleArray {
     }
 
     public int largest() {
-        int largest = 0;
+        int largest = array.get(0);
         for(int i : array) {
             if(i > largest) { largest = i; }
         }
         return largest;
+    }
+
+    public int smallest() {
+        int smallest = array.get(0);
+        for(int i : array) {
+            if(i < smallest) { smallest = i; }
+        }
+        return smallest;
     }
 }

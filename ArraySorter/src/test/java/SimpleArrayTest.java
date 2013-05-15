@@ -28,4 +28,11 @@ public class SimpleArrayTest {
         simpleArray.add(1).add(2).add(3);
         assertThat(simpleArray.largest(), is(3));
     }
+
+    @Test
+    public void shouldReturn1AsTheSmallestInteger(){
+        SimpleArray simpleArray = new SimpleArray();
+        simpleArray.add(1).add(2).add(3);
+        assertThat(simpleArray.smallest(), is(1));
+    }
 }

@@ -22,4 +22,10 @@ public class SimpleArrayTest {
         assertThat(simpleArray.size(), is(3));
     }
 
+    @Test
+    public void shouldReturn3AsTheLargestInteger(){
+        SimpleArray simpleArray = new SimpleArray();
+        simpleArray.add(1).add(2).add(3);
+        assertThat(simpleArray.largest(), is(3));
+    }
 }

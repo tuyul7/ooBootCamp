@@ -4,13 +4,22 @@ import main.java.SimpleArray;
 import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.greaterThan;
+import static org.hamcrest.Matchers.is;
 
 public class SimpleArrayTest {
 
     @Test
-    public void shouldHoldMultipleNumbersInAnArray(){
+    public void shouldHoldAValueInAnArray(){
         SimpleArray simpleArray = new SimpleArray();
-        assertThat(simpleArray.size(), greaterThan(0));
+        simpleArray.add(1);
+        assertThat(simpleArray.size(), is(1));
     }
+
+    @Test
+    public void shouldHold3ValuesInArray(){
+        SimpleArray simpleArray = new SimpleArray();
+        simpleArray.add(1).add(2).add(3);
+        assertThat(simpleArray.size(), is(3));
+    }
+
 }

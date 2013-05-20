@@ -14,7 +14,15 @@ public class ShoppingListTest {
         Item item = new Item();
         ShoppingList shoppingList = new ShoppingList();
         shoppingList.add(item);
-        assertThat(shoppingList.contains(), is(item));
+        assertThat(shoppingList.contains(), is(1));
     }
 
+    @Test
+    public void shouldHoldMultipleItems(){
+        Item item = new Item();
+        Item item2 = new Item();
+        ShoppingList shoppingList = new ShoppingList();
+        shoppingList.add(item).add(item2);
+        assertThat(shoppingList.contains(), is(2));
+    }
 }

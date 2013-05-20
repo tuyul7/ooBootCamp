@@ -1,15 +1,18 @@
 package main.java;
 
+import java.util.ArrayList;
+
 public class ShoppingList {
 
 
-    private Item items;
+    private ArrayList<Item> items = new ArrayList<Item>();
 
-    public Item add(Item item) {
-        return this.items = item;
+    public ShoppingList add(Item item) {
+        this.items.add(item);
+        return this;
     }
 
-    public Item contains() {
-        return items;
+    public int contains() {
+        return items.size();
     }
 }

@@ -17,4 +17,8 @@ public class Item {
     public int getQuantity() {
         return quantity;
     }
+
+    public void setQuantity(int i) {
+        this.quantity = i;
+    }
 }

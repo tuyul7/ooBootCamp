@@ -27,10 +27,19 @@ public class ShoppingListTest {
     }
 
     @Test
-    public void shouldHaveAmountsOfEachItem(){
+    public void shouldHaveQuantitiesOfEachItem(){
         Item item = new Item("bread");
         ShoppingList shoppingList = new ShoppingList();
         shoppingList.add(item);
         assertThat(shoppingList.quantityOf(item), is(1));
+    }
+
+    @Test
+    public void shouldIncrementItemQuantityIfTheSameItemTypeIsAddedTwice(){
+        Item item = new Item("bread");
+        Item item2 = new Item("bread");
+        ShoppingList shoppingList = new ShoppingList();
+        shoppingList.add(item).add(item2);
+        assertThat(shoppingList.quantityOf(item), is(2));
     }
 }

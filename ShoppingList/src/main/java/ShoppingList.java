@@ -7,15 +7,14 @@ public class ShoppingList {
 
     private ArrayList<Item> items = new ArrayList<Item>();
 
-    public ShoppingList add(Item item) {
+    public ShoppingList add(Item newItem) {
         boolean b = false;
-        for(Item it : items){
-            if(it.getType().equals(item.getType())) {
-                it.addAmt(item.getCount());
+        for(Item item : items){
+            if(item.getType().equals(item.getType())) {
                 b = true;
             }
         }
-        if(b) { this.items.add(item); }
+        if(b) { this.items.add(newItem); }
         return this;
     }
 

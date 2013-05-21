@@ -27,11 +27,10 @@ public class ShoppingListTest {
     }
 
     @Test
-    public void shouldCombineSameItemsWhenAddedSeparately(){
+    public void shouldHaveAmountsOfEachItem(){
         Item item = new Item("bread");
-        Item item2 = new Item("bread");
         ShoppingList shoppingList = new ShoppingList();
-        shoppingList.add(item).add(item2);
-        assertThat(shoppingList.contains(item, item2), is(true));
+        shoppingList.add(item);
+        assertThat(shoppingList.quantityOf(item), is(1));
     }
 }

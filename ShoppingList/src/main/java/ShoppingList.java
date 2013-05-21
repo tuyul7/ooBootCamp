@@ -25,4 +25,8 @@ public class ShoppingList {
         }
         return check.contains(false);
     }
+
+    public int quantityOf(Item item) {
+        return item.getQuantity();
+    }
 }

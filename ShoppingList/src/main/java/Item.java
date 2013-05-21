@@ -5,7 +5,7 @@ public class Item {
     private String type;
     private int count;
 
-    public Item(String type, int count) {
+    public Item(String type) {
         this.type = type;
         this.count = count;
     }

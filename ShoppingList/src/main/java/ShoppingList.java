@@ -8,18 +8,22 @@ public class ShoppingList {
     private ArrayList<Item> items = new ArrayList<Item>();
 
     public ShoppingList add(Item item) {
-        int i = 0;
+        boolean b = false;
         for(Item it : items){
             if(it.getType().equals(item.getType())) {
-                it.addAmt(it.getCount());
-                i++;
+                it.addAmt(item.getCount());
+                b = true;
             }
         }
-        if(i == 0) { this.items.add(item); }
+        if(b) { this.items.add(item); }
         return this;
     }
 
-    public int contains() {
-        return items.size();
+    public boolean contains(Item... item){
+        ArrayList<Boolean> check = new ArrayList<Boolean>();
+        for(Item i : item){
+            check.add(items.contains(i));
+        }
+        return check.contains(false);
     }
 }

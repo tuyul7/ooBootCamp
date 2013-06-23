@@ -11,20 +11,9 @@ import static org.junit.Assert.assertThat;
 
 public class PrimeNumberGeneratorTest {
 
-    PrimeNumberGenerator primeNumberGenerator = new PrimeNumberGenerator();
-
-    @Test
-    public void shouldFindThreeAsAPrimeNumber(){
-        assertThat(primeNumberGenerator.isPrime(3), is(true));
-    }
-
-    @Test
-    public void shouldFindFourAsNotAPrimeNumber(){
-        assertThat(primeNumberGenerator.isPrime(4), is(false));
-    }
-
     @Test
     public void shouldFindTwoThreeAndFiveAsPrimeNumbersUnderFive(){
+        PrimeNumberGenerator primeNumberGenerator = new PrimeNumberGenerator();
         List<Integer> primes = new ArrayList<Integer>();
         primes.add(5);
         primes.add(3);

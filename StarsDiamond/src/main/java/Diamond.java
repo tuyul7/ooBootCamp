@@ -19,13 +19,25 @@ public class Diamond {
     }
 
     public Diamond createDiamond(){
+        setDiamondToOddNumber();
+        createTriangle();
+        inverseTriangle();
+        return this;
+    }
+
+    public Diamond createDiamondWithNameInTheMiddle(){
+        setDiamondToOddNumber();
+        createTriangle();
+        inverseTriangle();
+        setMiddleRowAsName();
+        return this;
+    }
+
+    private void setDiamondToOddNumber() {
         if(MAX % 2 == 0) {
             System.out.println("Sorry, had to subtract one from your entry. Diamonds must have an odd number for its max row.");
             MAX -= 1;
         }
-        createTriangle();
-        inverseTriangle();
-        return this;
     }
 
     private void inverseTriangle() {
@@ -47,8 +59,6 @@ public class Diamond {
             iconRowBuilder.append(ICON);
         }
         return iconRowBuilder.toString();
-
-
     }
 
     private String createOffIconSpace() {
@@ -59,4 +69,20 @@ public class Diamond {
         return offIconRowBuilder.toString();
     }
 
+    private void setMiddleRowAsName() {
+        int middleRow = Rows.size()/2;
+        Rows.set(middleRow, centerName(Rows.get(middleRow).length()));
+    }
+
+    private String centerName(int rowSize) {
+        String name = "Abby";
+        StringBuilder nameRow = new StringBuilder();
+        if(name.length() < rowSize) {
+            int space = (rowSize - name.length()) / 2;
+            for(; space > 0; space--) {
+                nameRow.append(" ");
+            }
+        }
+        return nameRow.append(name).toString();
+    }
 }
